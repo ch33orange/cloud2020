@@ -11,7 +11,7 @@ eureka:
       fetch-registry: false
       service-url:
         #集群指向其它eureka
-          defaultZone: http://eureka7002.com:7002/eureka/
+          defaultZone: http://eureka7002.com:7002/eureka/  #这个加上就莫名其妙跳不过去
         #单机就是7001自己
 #        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 

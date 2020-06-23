@@ -10,6 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 public class Payment {
     private long id;
+    private String serial;
 
     public long getId() {
         return id;
@@ -26,6 +27,4 @@ public class Payment {
     public void setSerial(String serial) {
         this.serial = serial;
     }
-
-    private String serial;
 }

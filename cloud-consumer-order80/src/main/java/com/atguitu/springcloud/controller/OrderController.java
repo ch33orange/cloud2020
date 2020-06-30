@@ -24,7 +24,7 @@ import java.util.*;
 @RequestMapping("/consumer")
 public class OrderController {
 
-    //public static final String PAYMENT_URL = "http://localhost:8001";
+    //public static final String PAYMENT_URL = "http://localhost:8001"; 旧的没用ribbon lb
     public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     @Resource
@@ -36,6 +36,7 @@ public class OrderController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    //旧的没用ribbon lb
     @GetMapping("/payment/create")
     public CommonResult<Payment> create(Payment payment) {
         return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
@@ -69,6 +70,9 @@ public class OrderController {
             return new CommonResult<>(444, "操作失败!");
         }
     }
+
+
+    //使用 服务发现 不写死地址
 
     @GetMapping(value = "/payment/lb")
     public String getPaymentLB() {

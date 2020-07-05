@@ -7,7 +7,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 #配置Nacos地址
+        username: nacos # 支持账号密码认证
+        password: nacos
+#        server-addr: 121.196.52.244:8846 #,121.196.52.244:8848,118.31.68.37:8848  #配置Nacos地址
+        server-addr: localhost:8848
+        group: DEV_GROUP
+#        namespace: 80a14cb8-705b-4e61-b219-b869e56cd769 #dev
 
 management:
   endpoints:

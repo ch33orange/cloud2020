@@ -8,6 +8,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #配置Nacos地址
+        group: DEV_GROUP
 
 #消费之将要去访问的微服务名称(注册成功进nacos的微服务提供)
 service-url:

@@ -9,13 +9,15 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 121.196.52.244:8847 #Nacos服务注册中心地址
+#        server-addr: 121.196.52.244:8847 #Nacos服务注册中心地址
+        server-addr: localhost:8847 #Nacos服务注册中心地址
         username: bluer # 支持账号密码认证
         password: change33
         namespace: 80a14cb8-705b-4e61-b219-b869e56cd769 #dev
         group: DEV_GROUP
       config:
-        server-addr: 121.196.52.244:8847  #Nacos作为配置中心地址
+#        server-addr: 121.196.52.244:8847  #Nacos作为配置中心地址
+        server-addr: localhost:8847 #Nacos服务注册中心地址
         username: bluer # 支持账号密码认证
         password: change33
         file-extension: yml #指定yaml格式的配置
